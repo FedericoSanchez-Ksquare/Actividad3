@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Document Objecct Model-->
+
+<html>
+    <head>
+        <title> Form </title>
+        <style>
+            h1{
+                text-align: center;
+            }
+            h4{
+                text-align: center;
+            }
+
+            img {
+                border-radius: 0px;
+                width: 600px;
+                height: 300px;
+                
+
+            }
+            p.superbold {
+                font-weight: bold;
+            }
+            div.main{
+                margin: auto;
+                width: 60%;
+                text-align: center;
+                padding: 10px;
+                background-color: whitesmoke;
+            }
+            div.radio_pos{
+                text-align: center;
+            }
+
+            body {
+                background-color: beige;
+            }
+            form {
+                text-align: center;
+            }
+
+
+        </style>
+    </head>
+    <body >
+        <div>
+            <h1 >Survey</h1>
+            <h4>Please fill  out this survey with your opinoins about this topic</h4>
+            <div class ="main">
+                <form action="/signup" method ="POST">
+                    <p>Please write your NAME on the field:
+                        <input type="text" name="name" id ="login_user">
+                    </p>
+                    <br>
+                    <p>Please write your EMAIL on the field:
+                        <input type="email" name="Username" id ="login_username">
+                    </p>
+                    <br>
+                    <p>How many surveys have you taken on the past month?
+                        <input type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" > 
+                    </p>  
+                    <br>
+
+                    <div class ="radio_pos">
+                        <p>Have you taken surveys on any of the following subjects?</p>
+                        <input type="radio" id="subject1" name ="contact" value="subject1">
+                        <label for="subject1">Technology</label>
+                        <br>
+                        <input type="radio" id="subject2" name ="contact" value="subject2">
+                        <label for="subject2">Selfcare</label>
+                        <br>
+                        <input type="radio" id="Subject3" name ="subject" value="subject3">
+                        <label for="Subject3">Food and cooking</label>
+                        <br>
+                        <input type="radio" id="Subject4" name ="subject" value="subject4">
+                        <label for="Subject4">None of the above</label>
+                    </div>
+                    <br>
+
+                    <p>Do you want to take future surveys?</p>
+                    <input type="checkbox" is="scales" name="scales" checked>
+                    <label for="scales">Yes i would like to!</label>
+                    <br>
+                    <br>
+                    <p>What topics would you like to see on other surveys?</p>
+                    <select name="topics" id="topics_options">
+                        <option value="Tv">Tv</option>
+                        <option value="Movies">Movies</option>
+                        <option value="Games">Games</option>
+                        <option value="GeneralKnowledge">Gneral knowledge</option>
+                    </select>
+                    <br>
+                    <p>Would you like to leave feedback about this survey? write it in the area below! </p>
+                    <textarea name="feedback" id="user_feedback" cols="60" rows="10"></textarea>
+                    <br>
+                    <button type ="reset" >Finish the form</button>
+                </form>
+
+            
+            </div>
+        </div>
+
+
+    </body>
+    
+
+</html>
